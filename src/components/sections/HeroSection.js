@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { H1, MediumText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
+import PurchaseButton from "../buttons/PurchaseButton"
 
 function HeroSection() {
   return (
@@ -13,9 +13,13 @@ function HeroSection() {
           <Desctiption>
             i'm a senior ux designer at Electronic Arts, where I spend my days
             finding ways to inspire the world to play.
+            <br />
+            but there’s much more to me than where I work...
           </Desctiption>
-          <p>but there’s much more to me than where I work...</p>
-          <Link to="/page-2/">find out here</Link> <br />
+          <PurchaseButton
+            title="Start Learning"
+            subtitle="100+ hours ov video"
+          />
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
@@ -25,7 +29,7 @@ function HeroSection() {
 export default HeroSection
 
 const Wrapper = styled.div`
-  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
+  background-image: url("/images/background/hero-bg-large.jpg");
 `
 
 const ContentWrapper = styled.div`
@@ -40,7 +44,7 @@ const TextWrapper = styled.div`
 `
 
 const Title = styled(H1)`
-  color: ${themes.dark.text1};
+  color: ${themes.light.text1};
 `
 
 const Desctiption = styled(MediumText)``

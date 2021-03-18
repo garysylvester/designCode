@@ -1,9 +1,11 @@
+import { color } from "../../constraints/Tokens"
+
 export const themes = {
   light: {
-    text1: `black`,
+    text1: `${color.primary}`,
     text2: `rgba(0,0,0,0.7)`,
-    primary: `#3913B8`,
-    secondary: "#2FB5FC",
+    primary: `${color.primary}`,
+    secondary: `${color.secondary}`,
     backgroundColor: `#f2f6ff`,
     card: {
       backgroundColor: `rgba(255, 255, 255, 0.6)`,
