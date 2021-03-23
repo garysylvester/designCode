@@ -50,7 +50,10 @@ export const spacing = {
 
 // TYPOGRAPHY
 export const typography = {
-  headingFont: "Gilroy Bold",
-  bodyFont: "Gilroy Regular",
-  monospaceFont: "Roboto Mono",
+  headingFont:
+    "'Gilroy Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+  bodyFont:
+    "'Gilroy Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+  monospaceFont:
+    "'Roboto Mono',SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
 }

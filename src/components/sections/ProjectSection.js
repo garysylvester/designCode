@@ -11,7 +11,7 @@ export default function ProjectSection() {
     <SectionWrapper>
       <SectionHeader>
         <SectionInner>
-          <SectionTitle>Collection</SectionTitle>
+          <SectionTitle>Photography Collections</SectionTitle>
           <h2>Filters</h2>
         </SectionInner>
       </SectionHeader>
@@ -31,7 +31,7 @@ const SectionWrapper = styled.div`
   display: grid;
   gap: ${spacing.dimension.spaceLarger}px;
   grid-template-rows: repeat(2, auto);
-  padding-top: ${spacing.dimension.spaceMacro}px;
+  padding-top: ${spacing.layout.spaceMicro}px;
 `
 
 const SectionInner = styled.div`

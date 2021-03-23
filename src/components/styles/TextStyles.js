@@ -2,14 +2,8 @@ import styled from "styled-components"
 import { typography } from "../../constraints/Tokens"
 import "./Typography.css"
 
-var displayFontList =
-  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
-
-var monoFontList =
-  "SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace"
-
 export const H1 = styled.h1`
-  font-family: "${typography.headingFont}", displayFontList;
+  font-family: ${typography.headingFont};
   font-weight: bold;
   font-size: 60px;
 
@@ -18,7 +12,7 @@ export const H1 = styled.h1`
   }
 `
 export const H2 = styled.h2`
-  font-family: "${typography.headingFont}", displayFontList;
+  font-family: ${typography.headingFont};
   font-weight: bold;
   font-size: 40px;
 
@@ -28,7 +22,7 @@ export const H2 = styled.h2`
 `
 
 export const H3 = styled.h3`
-  font-family: "${typography.headingFont}", displayFontList;
+  font-family: ${typography.headingFont};
   font-weight: bold;
   font-size: 30px;
 
@@ -38,7 +32,7 @@ export const H3 = styled.h3`
 `
 
 export const H4 = styled.h4`
-  font-family: "${typography.headingFont}", displayFontList;
+  font-family: ${typography.headingFont};
   font-weight: bold;
   font-size: 24px;
 
@@ -48,7 +42,7 @@ export const H4 = styled.h4`
 `
 
 export const H5 = styled.h5`
-  font-family: "${typography.headingFont}", displayFontList;
+  font-family: ${typography.headingFont};
   font-weight: bold;
   font-size: 18px;
 
@@ -58,35 +52,35 @@ export const H5 = styled.h5`
 `
 
 export const BodyIntro = styled.p`
-  font-family: "${typography.bodyFont}", displayFontList;
+  font-family: ${typography.bodyFont};
   font-weight: 500;
   font-size: 24px;
   line-height: 140%normal;
 `
 
 export const BodyMain = styled.p`
-  font-family: "${typography.bodyFont}", displayFontList;
+  font-family: ${typography.bodyFont};
   font-weight: normal;
   font-size: 20px;
   line-height: 140%normal;
 `
 
 export const MediumText = styled.p`
-  font-family: "${typography.bodyFont}", displayFontList;
+  font-family: ${typography.bodyFont};
   font-weight: normal;
   font-size: 16px;
   line-height: 130%;
 `
 
 export const Caption = styled.p`
-  font-family: "${typography.bodyFont}", displayFontList;
+  font-family: ${typography.bodyFont};
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
 `
 
 export const Caption2 = styled.p`
-  font-family: "${typography.headingFont}", displayFontList;
+  font-family: ${typography.headingFont};
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
@@ -94,14 +88,14 @@ export const Caption2 = styled.p`
 `
 
 export const SmallText = styled.p`
-  font-family: "${typography.monospaceFont}", monoFontList;
+  font-family: ${typography.monospaceFont};
   font-weight: normal;
   font-size: 12px;
   line-height: 130%;
 `
 
 export const SmallText2 = styled.p`
-  font-family: "${typography.monospaceFont}", monoFontList;
+  font-family: ${typography.monospaceFont};
   font-weight: 500;
   font-size: 10px;
   line-height: 130%;
