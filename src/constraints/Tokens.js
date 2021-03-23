@@ -1,8 +1,24 @@
 // COLORS
 export const color = {
-  primary: "teal",
-  secondary: "violet",
-  tertiary: "pink",
+  brand: {
+    brandPrimary: "#E1B4BE",
+    brandSecondary: "#B4E1D1",
+    brandTertiary: "#D392EA",
+  },
+
+  neutrals: {
+    neutral0: "#ffffff",
+    neutral100: "#F6F6F6",
+    neutral200: "#D8D8D8",
+    neutral300: "",
+    neutral400: "",
+    neutral500: "",
+    neutral600: "",
+    neutral700: "",
+    neutral800: "#2D2D2D",
+    neutral900: "",
+    neutral1000: "",
+  },
 }
 
 // SPACING {
@@ -18,4 +34,23 @@ export const spacing = {
     spaceLargest: 48,
     spaceMacro: 96,
   },
+
+  layout: {
+    spaceMicro: 96,
+    spaceSmallest: 112,
+    spaceSmaller: 128,
+    spaceSmall: 144,
+    spaceMedium: 160,
+    spaceLarge: 176,
+    spaceLarger: 192,
+    spaceLargest: 208,
+    spaceMacro: 224,
+  },
+}
+
+// TYPOGRAPHY
+export const typography = {
+  headingFont: "Gilroy Bold",
+  bodyFont: "Gilroy Regular",
+  monospaceFont: "Roboto Mono",
 }

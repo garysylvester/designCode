@@ -2,7 +2,7 @@ import { color } from "../../constraints/Tokens"
 
 export const themes = {
   light: {
-    text1: `${color.primary}`,
+    text1: `${color.neutrals.neutral800}`,
     text2: `rgba(0,0,0,0.7)`,
     primary: `${color.primary}`,
     secondary: `${color.secondary}`,
