@@ -32,6 +32,12 @@ const SectionWrapper = styled.div`
   gap: ${spacing.dimension.spaceLarger}px;
   grid-template-rows: repeat(2, auto);
   padding-top: ${spacing.layout.spaceMicro}px;
+
+  @media (max-width: 450px) {
+    max-width: 100%;
+    width: calc(100% - 32px);
+    padding-top: ${spacing.dimension.spaceLarger}px;
+  }
 `
 
 const SectionInner = styled.div`
