@@ -3,16 +3,14 @@ import styled, { keyframes } from "styled-components"
 import { H1, MediumText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 // import PurchaseButton from "../buttons/PurchaseButton"
-// import MockupAnimation from "../animations/MockupAnimation"
 import { spacing } from "../../constraints/Tokens"
 import WaveBackground from "../backgrounds/WaveBackground"
-// import ImageBackground from "../backgrounds/ImageBackground"
 
 function HeroSection() {
   return (
     <Wrapper>
       <WaveBackground />
-      {/* <ImageBackground /> */}
+
       <ContentWrapper>
         <TextWrapper>
           <Title>
@@ -29,7 +27,6 @@ function HeroSection() {
             subtitle="100+ hours ov video"
           /> */}
         </TextWrapper>
-        {/* <MockupAnimation /> */}
       </ContentWrapper>
     </Wrapper>
   )
