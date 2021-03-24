@@ -18,9 +18,8 @@ function HeroSection() {
           </Title>
           <Desctiption>
             i'm a senior ux designer at Electronic Arts, where I spend my days
-            finding ways to inspire the world to play.
-            <br />
-            but there’s much more to me than where I work...
+            finding ways to inspire the world to play. but there’s much more to
+            me than where I work...
           </Desctiption>
           {/* <PurchaseButton
             title="Start Learning"
@@ -61,7 +60,8 @@ const ContentWrapper = styled.div`
   @media (max-width: 450px) {
     grid-template-columns: auto;
     gap: ${spacing.dimension.spaceLargest}px;
-    padding: 24px;
+    padding: ${spacing.dimension.spaceLarge}px ${spacing.dimension.spaceMacro}px
+      ${spacing.dimension.spaceLarge}px ${spacing.dimension.spaceLarge}px;
     height: 550px;
     align-items: flex-end;
   }

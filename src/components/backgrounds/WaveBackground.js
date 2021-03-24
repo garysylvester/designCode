@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Parallax } from "react-parallax"
+import { spacing } from "../../constraints/Tokens"
 
 const image1 = "/images/background/website-hero.png"
 
@@ -27,7 +28,7 @@ const Wrapper = styled.div`
 
     @media (max-width: 450px) {
       height: 550px;
-      margin-right: 0;
+      margin-right: ${spacing.dimension.spaceLarge}px;
       transform: translateX(100px);
     }
 
