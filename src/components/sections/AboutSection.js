@@ -1,35 +1,39 @@
-import React from "react"
-import styled from "styled-components"
-import { spacing } from "../../constraints/Tokens"
+import React, { useRef, useState } from "react"
+import { Canvas, useFrame } from "react-three-fiber"
 
-export default function AboutSection() {
+function Box(props) {
+  // This reference will give us direct access to the mesh
+  const mesh = useRef()
+  // Set up state for the hovered and active state
+  const [hovered, setHover] = useState(false)
+  const [active, setActive] = useState(false)
+  // Rotate mesh every frame, this is outside of React without overhead
+  useFrame(() => {
+    mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+  })
   return (
-    <Wrapper>
-      <LeftSide>
-        <h2>Heres a little more about me</h2>
-      </LeftSide>
-      <RightSide></RightSide>
-    </Wrapper>
+    <mesh
+      {...props}
+      ref={mesh}
+      scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
+      onClick={e => setActive(!active)}
+      onPointerOver={e => setHover(true)}
+      onPointerOut={e => setHover(false)}
+    >
+      <boxBufferGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
+    </mesh>
   )
 }
 
-const Wrapper = styled.div`
-  max-width: 1234px;
-  margin: 0 auto;
-  width: calc(100% - 96px);
-  height: auto;
-  display: grid;
-  gap: ${spacing.dimension.spaceLarge}px;
-  grid-template-columns: repeat(2, 1fr);
-  padding-top: ${spacing.layout.spaceMicro}px;
-`
-
-const LeftSide = styled.div`
-  background: red;
-  height: 300px;
-`
-
-const RightSide = styled.div`
-  background: blue;
-  height: 300px;
-`
+export default function App() {
+  return (
+    <Canvas>
+      <ambientLight intensity={0.5} />
+      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+      <pointLight position={[-10, -10, -10]} />
+      <Box position={[-1.2, 0, 0]} />
+      <Box position={[1.2, 0, 0]} />
+    </Canvas>
+  )
+}

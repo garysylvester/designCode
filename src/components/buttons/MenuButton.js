@@ -16,7 +16,7 @@ export default function MenuButton(props) {
 }
 
 const MenuItem = styled.div`
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 1);
   background: rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 24px auto;
@@ -25,6 +25,10 @@ const MenuItem = styled.div`
   align-items: center;
   transition: 0.5s ease-out;
   border-radius: 10px;
+
+  /* @media (max-width: 450px) {
+    color: rgba(255, 255, 255, 1);
+  } */
 
   :hover {
     background: rgba(0, 0, 0, 0.1);

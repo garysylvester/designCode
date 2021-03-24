@@ -1,36 +1,43 @@
 import React from "react"
 import styled from "styled-components"
+import { Parallax } from "react-parallax"
+
+const image1 = "/images/background/website-hero.png"
 
 export default function WaveBackground() {
   return (
     <Wrapper>
       <Background />
-      <Wave
-        src="/images/waves/hero-wave1.svg"
-        style={{ top: "100px", filter: "blur(80px)" }}
-      />
-      <Wave src="/images/waves/hero-wave2.svg" style={{ top: "350px" }} />
-      <BottomWave src="/images/waves/hero-wave3.svg" style={{ top: "550px" }} />
+      <Parallax bgImage={image1} strength={500} className={"bgImageContainer"}>
+        <ParallaxInnerDiv></ParallaxInnerDiv>
+      </Parallax>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   position: relative;
-`
 
-const Wave = styled.img`
-  position: absolute;
-  z-index: -1;
+  .bgImageContainer {
+    position: absolute;
+    width: 714px;
+    z-index: -1;
+    float: right;
+    margin-right: 98px;
 
-  @media (min-width: 1440px) {
-    width: 100%;
-  }
-`
+    @media (max-width: 450px) {
+      height: 550px;
+      margin-right: 0;
+      transform: translateX(100px);
+    }
 
-const BottomWave = styled(Wave)`
-  @media (prefers-color-scheme: dark) {
-    content: url("/images/waves/hero-wave3-dark.svg");
+    img {
+      height: 800px !important;
+
+      @media (max-width: 450px) {
+        height: 550px !important;
+      }
+    }
   }
 `
 
@@ -39,5 +46,16 @@ const Background = styled.div`
   width: 100%;
   height: 800px;
   z-index: -1;
-  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
+  background: #ffffff;
+
+  @media (max-width: 450px) {
+    height: 550px;
+  }
+`
+const ParallaxInnerDiv = styled.div`
+  height: 800px;
+
+  @media (max-width: 450px) {
+    height: 550px;
+  }
 `

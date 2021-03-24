@@ -2,15 +2,17 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { H1, MediumText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
-import PurchaseButton from "../buttons/PurchaseButton"
+// import PurchaseButton from "../buttons/PurchaseButton"
 import MockupAnimation from "../animations/MockupAnimation"
 import { spacing } from "../../constraints/Tokens"
 import WaveBackground from "../backgrounds/WaveBackground"
+// import ImageBackground from "../backgrounds/ImageBackground"
 
 function HeroSection() {
   return (
     <Wrapper>
       <WaveBackground />
+      {/* <ImageBackground /> */}
       <ContentWrapper>
         <TextWrapper>
           <Title>
@@ -22,12 +24,12 @@ function HeroSection() {
             <br />
             but there’s much more to me than where I work...
           </Desctiption>
-          <PurchaseButton
+          {/* <PurchaseButton
             title="Start Learning"
             subtitle="100+ hours ov video"
-          />
+          /> */}
         </TextWrapper>
-        <MockupAnimation />
+        {/* <MockupAnimation /> */}
       </ContentWrapper>
     </Wrapper>
   )
@@ -42,26 +44,35 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   overflow: hidden;
+  height: 800px;
+
+  @media (max-width: 450px) {
+    height: 550px;
+  }
 `
 
 const ContentWrapper = styled.div`
   max-width: 1234px;
+  position: absolute;
+  top: 0;
   margin: 0 auto;
   padding: 200px 30px;
   display: grid;
   grid-template-columns: 360px auto;
-  gap: ${spacing.dimension.spaceLarger}px;
+  gap: ${spacing.dimension.spaceMedium}px;
 
   @media (max-width: 450px) {
     grid-template-columns: auto;
     gap: ${spacing.dimension.spaceLargest}px;
-    padding: 150px ${spacing.dimension.spaceMedium}px 250px;
+    padding: 24px;
+    height: 550px;
+    align-items: flex-end;
   }
 `
 const TextWrapper = styled.div`
   max-width: 360px;
   display: grid;
-  gap: 32px;
+  gap: ${spacing.dimension.spaceMedium}px;
 
   > * {
     opacity: 0;
@@ -81,21 +92,16 @@ const TextWrapper = styled.div`
 
 const Title = styled(H1)`
   color: ${themes.light.text1};
-  background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-
-  span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
 
   @media (max-width: 450px) {
-    font-size: 48px;
+    color: ${themes.dark.text1};
   }
 `
 
-const Desctiption = styled(MediumText)``
+const Desctiption = styled(MediumText)`
+  color: ${themes.light.text1};
+
+  @media (max-width: 450px) {
+    color: ${themes.dark.text1};
+  }
+`
