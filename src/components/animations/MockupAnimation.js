@@ -47,12 +47,12 @@ const Wrapper = styled.div`
   .mockup3 {
     position: absolute;
     width: 701px;
-    height: 600px;
+    height: 630px;
     left: 0;
-    top: 60px;
+    top: -150px;
     background: url("/images/background/website-hero.png");
     background-size: contain;
-
+    background-repeat: no-repeat;
     border-radius: 8px;
   }
 `
